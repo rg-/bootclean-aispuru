@@ -1,0 +1,99 @@
+.ui-tokko-property{
+
+	border:1px solid #c2c2c2;
+	background-color:#fff;
+	display:block;
+	@include box-shadow(0 .5rem 1rem rgba($black, .15));
+	@include transition();
+
+	.ui-tokko-property-image{
+		position:relative; 
+		color:#fff;
+		overflow:hidden;
+		.icon{
+			position:absolute;
+			bottom:20px;
+			right:20px;
+		}
+		.ref{
+			font-size:12px;
+			text-transform:uppercase;
+			position:absolute;
+			top:20px;
+			left:20px;
+			letter-spacing:1px;
+		}
+		.ui-tokko-property-header{
+			position:absolute;
+			bottom:20px;
+			left:20px;
+			.meta{
+				font-size:15px;
+				letter-spacing:1px;
+			}
+			.title{
+				font-size:23px;
+				margin:0;
+				letter-spacing:1px;
+			}
+			.zone{
+				font-size:11px;
+				letter-spacing:1px;
+				font-weight:400;
+			}
+		}
+		.embed-responsive{
+			    z-index: 0;
+			    @include transition(3s ease all);
+			    @include scale(1);
+		}
+		.embed-responsive-item{
+			
+			z-index:1;
+			&:after{
+				content:"";
+				position:absolute;
+				top:0;
+				left:0;
+				right:0;
+				bottom:0;
+				z-index:0;
+				@include gradient (rgba(#000,0), rgba(#000,.6));
+			}
+
+			.image-cover.isv-lazysrc-loaded{
+					z-index:1;
+			}
+			
+		}
+	} 
+
+	&:hover{
+		text-decoration:none;
+		@include box-shadow(0 .5rem 1rem rgba($black, .25));
+		.embed-responsive{
+			@include scale(1.1);
+		}
+	}
+
+}
+
+
+.ui-tokko-property-features{
+		background-color:#fff;
+		color:$body-color;
+		padding:20px 5px;
+		display:flex;
+		align-items:center;
+		justify-content:center;
+		
+		.feature{
+			margin:0 4px;
+			display:flex;
+			align-items:center;
+			> i{
+				margin-right:6px;
+				color:$primary;
+			}
+		}
+	}

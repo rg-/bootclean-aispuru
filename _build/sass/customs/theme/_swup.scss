@@ -1,0 +1,75 @@
+/*
+
+	swup
+
+  EX: 
+  html.is-animating.is-leaving body{
+    &:before{ 
+      content: "";
+      @include make-loader(fixed, 30000, block, rgba($BC-body-overlay-color-ajax,0), $BC-body-loader-image-ajax, $BC-body-loader-height-ajax, $BC-body-loader-transition-ajax );
+
+    }
+  }
+*/ 
+
+
+.swup-transition-main {
+  transition: opacity 1s, transform 1s; 
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+} 
+ 
+html.is-animating {
+
+
+  .swup-transition-main {
+    opacity: .5;
+  }
+
+  #body-loader{ 
+    background-color:rgba($secondary,.8)!important;
+    display:block!important;
+    @include opacity(1);
+  }
+
+}
+#main-content{
+  @include transition(1s ease all); 
+  position: relative;
+  top:0;
+}
+html.is-animating.is-leaving{
+  #main-content{ 
+    top:-120px;
+  }
+}
+
+html.is-animating body.loading{ 
+  #body-loader{
+    @include transition(1s ease all 1s); 
+    background-color:rgba($secondary,1)!important;
+  }
+}
+
+html.is-animating.is-leaving .swup-transition-main {
+  //opacity: .6!important;
+  //transform: translate3d(0, 100px, 0)!important;
+}
+html.is-animating.swup-theme-reverse .swup-transition-main {
+  //opacity: .6!important;
+  //transform: translate3d(0, 100px, 0)!important;
+}
+html.is-animating.swup-theme-reverse.is-leaving .swup-transition-main {
+  //opacity: .6!important;
+  //transform: translate3d(0, -100px, 0)!important;
+} 
+
+
+html.transitionStart.is-leaving .swup-transition-main{
+  //background-color:red!important; 
+}
+
+html.transitionEnd .swup-transition-main{
+  //background-color:blue!important; 
+  // animation: swupFadeIn 3s ease-in-out;
+} 

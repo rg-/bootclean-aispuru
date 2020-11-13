@@ -1,0 +1,90 @@
+
+.dropup .dropdown-toggle::after{
+	content:'\e93e';
+}
+
+.dropdown-toggle{
+	text-transform:uppercase;
+	&::after{
+
+		width:24px;
+		height:24px;
+		border:0!important; 
+	  color:$primary;
+	  margin: 0!important; 
+    font-size: 22px;
+	  @include make-as-icomoon('\e93e');
+		position: absolute;
+		top:12px;
+		right:12px;
+	}
+
+	&[aria-expanded="true"]::after{
+    top: 10px; 
+	}
+
+}
+
+.dropdown-menu{
+	padding:0;
+	max-height:300px;
+	.dropdown-item{
+		padding:.5rem 1rem;
+		font-size:12px;
+		text-transform:uppercase;
+	}
+}
+
+
+button, .btn, .dropdown-toggle, .bootstrap-select .dropdown-toggle{
+	@include box-shadow(none!important);
+	&:focus, &:active, &.active{
+		outline: none!important;
+		@include box-shadow(none!important);
+	}
+	
+}
+
+.btn{
+
+	font-size: 14px;
+	letter-spacing:1px;
+	font-family: 'Raleway'; 
+	font-weight:500;
+	padding: 14px 20px 13px 20px;
+
+	&.btn-primary{
+		color: #fff;
+	}
+
+}
+
+.btn-sm{
+	font-size:12px;
+}
+
+.btn-link{
+	color:$body-color;
+	padding-left:0;
+	padding-right:0;
+
+	[class^="icon-"], [class*=" icon-"]{
+		vertical-align:-4px;
+	}
+	&:hover{
+		text-decoration:none;
+	}
+}
+
+.btn-icon, .btn-circle{
+	width:50px;
+	height:50px;
+	padding:0;
+	line-height:54px;
+	[class^="icon-"], [class*=" icon-"]{
+		font-size: 20px;
+	}
+	&.alt{
+		width:40px;
+	}
+}

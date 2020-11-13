@@ -1,0 +1,22 @@
+
+.form-control{
+	@include box-shadow(none);
+	height:50px;
+	font-size: 14px;
+	font-family: 'Raleway'; 
+	font-weight:400;
+	padding: 14px 20px 13px 20px;
+	letter-spacing:1px;
+	&:focus{
+		@include box-shadow(none);
+	}
+
+	&.alt{
+		background-color: #393940;
+		border-color: #393940;
+		color: #fff;
+		&::placeholder{
+			color: #818185;
+		}
+	}
+}

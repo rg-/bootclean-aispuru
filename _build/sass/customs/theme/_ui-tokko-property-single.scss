@@ -1,0 +1,49 @@
+.ui-tokko-property-single{
+
+	font-size:14px;
+
+	.section-title{
+		.ref{
+			position:relative;
+			bottom:10px;
+		}
+	}
+
+	.ui-tokko-property-features{
+		background-color:transparent;
+		.feature{
+			font-size:20px;
+			[class^="icon-"], [class*=" icon-"]{
+				font-size:42px;
+			}
+		}
+	}
+
+}
+
+.ui-slick-property{
+	position:relative;
+
+	.ui-slick-pager{
+		position: absolute;
+		right: -30px;
+		bottom: 20px; 
+		.pager{
+			position: absolute;
+			left:0;
+			right:0;
+			bottom:-70px; 
+		}
+		
+		.btn{
+			color:$darklight;
+			background-color:#fff;
+			&:hover{
+				color:$primary;
+				background-color:#fff;
+			}
+		} 
+
+	}
+
+}

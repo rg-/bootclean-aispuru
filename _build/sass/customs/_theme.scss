@@ -1,0 +1,171 @@
+html,body {
+	height:100%; 
+}
+#main-content {
+	background-color:$light;
+}
+#main-navbar:hover{ 
+}
+
+.content-wrap{ 
+	img{
+		max-width:100%;
+		height:auto;
+	}
+}  
+
+@import "theme/ui-tokko-property";
+@import "theme/ui-tokko-property-single";
+
+@import "theme/main-navbar";
+@import "theme/typo";
+@import "theme/btn";
+@import "theme/form";
+
+@import "theme/swup"; 
+@import "theme/is-inview"; 
+
+[class^="icon-"], [class*=" icon-"] {
+
+	font-size:24px;
+	&.sm{
+		font-size: 14px;
+	}
+	&.lg{
+		font-size:32px;
+	}
+	&.xl{
+		font-size:64px;
+	}
+}
+
+.ui-section{
+
+}
+
+.ui-section-circle{
+	position:absolute;
+	z-index:19;
+	right: 0;
+	top: 60px;
+	width:86px;
+	height:86px;
+	background-color:#fff;
+	border:1px solid #fff;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	@include border-radius(100%);
+	@include box-shadow($box-shadow-sm);
+
+
+	&.tl{
+		top:-40px;
+		right:inherit;
+		left:220px;
+		border:0;
+		background-color:transparent;
+		@include box-shadow(none);
+	}
+}
+
+.ui-overlay-marcas{
+	position:relative;
+	&:after{
+		content:"";
+		background-image:url('../images/theme/overlay-marcas.png');
+		background-size: 276px auto;
+		background-repeat: no-repeat;
+		position:absolute;
+		left: -60px;
+		top: -70px;
+		width:276px;
+		height:164px;
+	}
+}
+
+.ui-section-box{
+	position:absolute;
+	z-index:19;
+	bottom:0;
+	left:50%;
+	@include translate(-50%,0);
+	background-color:$secondary;
+	color:#fff;
+	padding:45px;
+}
+
+.ui-slick-pager{ 
+
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	padding:20px 12px;
+
+	.pager{
+
+		padding:12px;
+
+		display:flex;
+		align-items:center;
+		justify-content:center;
+
+		.current{
+			font-size:21px;
+			color:$body-color;
+			position: relative;
+			top: -4px;
+		}
+
+		.sep{
+			color:$primary;
+			width:16px;
+			font-size:24px;
+		}
+
+		.total{
+			font-size:15px;
+			color:#c2c2c2;
+			position: relative;
+			top: 7px;
+		}
+
+	}
+
+}
+
+
+.ui-thumb-card{
+	max-width:220px;
+	margin-left:auto;
+	margin-right:auto;
+	.thumb{
+		@include box-shadow($box-shadow);
+	} 
+}
+
+
+.ui-breadcrumb{
+	font-size:12px;
+	text-transform:uppercase;
+	margin:0;
+	color:$body-color;
+	a{
+		color:$body-color;
+	}
+}
+
+
+
+.ui-embed-overlay{
+	position: absolute;
+	left:0;
+	right:0;
+	bottom:0;
+	padding:40px 60px;
+	@include gradient(rgba(#000,0), rgba(#000,.8));
+	z-index:10;
+}
+ 

@@ -1,0 +1,129 @@
+#main-navbar{
+
+	.navbar-nav{
+		font-size:12px;
+	}
+	.nav-item{
+
+		&.dropdown{
+			[data-toggle="dropdown"]{
+		    padding-right: 35px;
+
+		    &::after{
+					font-size: 15px;
+					width: 15px;
+					height: 15px;
+					top: 15px;
+		    }
+		    &[aria-expanded="true"]::after{
+		    	top: 15px;
+		    }
+			}
+
+			.dropdown-item:hover, .dropdown-item:focus{
+				background-color:transparent;
+			}
+
+			.dropdown-menu{
+				background-color:$secondary;
+				.nav-item{
+					&.active{
+						a{
+							color:$primary;
+						}
+					}
+				}
+				.nav-link{ 
+					&:before{
+						display:none!important;
+					}
+				}
+			}
+		} 
+
+		> .nav-link{
+			color:#fff; 
+			text-transform:uppercase;
+			padding: 1rem;
+    	font-weight: 600;
+    	letter-spacing:1px;
+    	position:relative;
+    	&:before{
+    		content:"";
+    		height:1px;
+    		position:absolute;
+    		bottom:10px;
+    		left:0;
+    		right:0;
+    		background-color:rgba(#fff,0);
+    		@include transition();
+    	}
+    	&:hover{
+    		&:before{
+    			background-color:rgba(#fff,1);
+					left:.5rem;
+    			right:.5rem;
+    		}
+    	}
+		}
+		&.active{
+			background-color:transparent!important;
+			> .nav-link{
+				color:#fff; 
+				font-weight: 700; 
+				&:before{
+					background-color:rgba(#fff,1)!important;
+					left:.5rem;
+    			right:.5rem;
+				}
+			}
+		}
+	} 
+
+	
+
+}
+
+#main-navbar{
+
+	&.affix, &.navbar-transparent.affix,
+	&.navbar-simple{
+ 		background-color:$secondary;
+ 		.navbar-nav{
+ 			padding-top:3px;
+ 		}
+
+ 		.nav-item{
+ 			> .nav-link{
+ 				&:before{
+ 					background-color:rgba($primary,0)!important;
+ 				}
+ 			}
+ 			&.active > .nav-link, > .nav-link:hover{
+ 				&:before{
+ 					background-color:rgba($primary,1)!important;
+ 				}
+ 			}
+ 		}
+
+ 		.navbar-brand {
+ 			padding-top:20px;
+ 			padding-bottom:20px;
+ 			img{
+ 				width:200px;
+ 			}
+ 		}
+	} 
+
+	&.navbar-transparent{ 
+		background-color:transparent;
+		.navbar-nav{
+ 			padding-top:20px;
+ 		}
+		.navbar-brand {
+ 			padding-top:50px;
+ 			padding-bottom:20px;
+ 		}
+	}
+
+} 

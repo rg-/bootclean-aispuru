@@ -1,0 +1,39 @@
+.section-title{
+	line-height:1;
+	letter-spacing:1.5px;
+	&.lg{
+		font-size:47px;
+	}
+	&.xl{
+		font-size:53px;
+	}
+}
+.section-subtitle{
+	font-style:italic;
+	font-size:22px;
+	line-height:1;
+	letter-spacing:1px;
+	&.md{
+		font-size:20px;
+	}
+}
+.font-size-12{
+	font-size:12px!important;
+	letter-spacing:1px;
+}
+.font-size-14{
+	font-size:14px!important;
+	letter-spacing:1px;
+}
+.font-size-18{
+	font-size:18px!important;
+	letter-spacing:1px;
+}
+.font-size-20{
+	font-size:20px!important;
+	letter-spacing:1px;
+}
+.font-size-22{
+	font-size:22px!important;
+	letter-spacing:1px;
+}
