@@ -16,6 +16,7 @@ html,body {
 
 @import "theme/ui-tokko-property";
 @import "theme/ui-tokko-property-single";
+@import "theme/ui-tokko-development"; 
 
 @import "theme/main-navbar";
 @import "theme/typo";
@@ -37,6 +38,15 @@ html,body {
 	&.xl{
 		font-size:64px;
 	}
+}
+.icon-circular{
+	width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff;
+  border-radius: 100%; 
 }
 
 .ui-section{
@@ -91,6 +101,8 @@ html,body {
 	z-index:19;
 	bottom:0;
 	left:50%;
+	width: 300px;
+	max-width: 90%;
 	@include translate(-50%,0);
 	background-color:$secondary;
 	color:#fff;

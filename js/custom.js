@@ -2,6 +2,9 @@
 
 
 +function(t){ 
+
+
+	onload_styles();
  	 
  	$('[data-is-inview]').is_inview(); 
 
@@ -10,6 +13,15 @@
 	modals_init();
 
 }(jQuery); 
+
+function onload_styles(){ 
+
+	$('[data-onload-style]').each(function(){ 
+		var style = $(this).attr('data-onload-style');
+		$(this).attr('style', style); 
+	});
+
+}
 
 function modals_init(){
 	$('.modal').on('show.bs.modal', function (e) { 

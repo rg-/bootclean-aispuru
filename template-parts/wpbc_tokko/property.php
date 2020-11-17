@@ -12,7 +12,8 @@ $propiedad_url = get_permalink($single_page).WPBC_get_tokko_rewrite_property_url
 
 	<div class="ui-tokko-property-image">
 
-		<?php
+		<?php 
+
 		$get_cover_picture = $property->get_cover_picture(); 
 		if(!empty($get_cover_picture)){
 			$img = $get_cover_picture->thumb;
@@ -25,16 +26,13 @@ $propiedad_url = get_permalink($single_page).WPBC_get_tokko_rewrite_property_url
 		WPBC_build_lazyloader_image(array(
 			'img_hi' => $img_lg, 
 			'img_low' => $img,
+			'embed' => '4by3',
 		));
 		?>
-		<!--
-		<div class="embed-responsive embed-responsive-4by3 bg-secondary">
-			<div data-is-inview-lazybackground="<?php echo $img_lg; ?>" class="embed-responsive-item image-cover" style="background-image: url(<?php echo $img; ?>);"></div>
-		</div>
-		-->
-		<span class="ref">REF: <?php echo $property->get_field('reference_code')?></span>
+		
+		<span class="ref">REF: <?php echo $property->get_field('reference_code'); ?></span>
 
-		<span class="icon"><i class="icon-arrow-right lg"></i></span>
+		<span class="icon-circular"><i class="icon-arrow-right md"></i></span>
 
 		<div class="ui-tokko-property-header">
 
@@ -59,17 +57,20 @@ $propiedad_url = get_permalink($single_page).WPBC_get_tokko_rewrite_property_url
 
 			array(
 				'key' => 'suite_amount',  
-				'icon' => 'icon-suite_amount'
+				'icon' => 'icon-suite_amount lg',
+				'labels' => array('dorm','dorms')
 			),
 
 			array(
 				'key' => 'bathroom_amount',  
-				'icon' => 'icon-bathroom_amount'
+				'icon' => 'icon-bathroom_amount lg',
+				'labels' => array('baño','baños')
 			),
 
 			array(
 				'key' => 'total_surface',  
-				'icon' => 'icon-total_surface'
+				'icon' => 'icon-total_surface lg',
+				'labels' => array('m2','m2')
 			), 
 
 		); 

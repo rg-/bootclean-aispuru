@@ -19,6 +19,17 @@
 		}
 	}
 
+	.ui-tokko-property-prices{
+		.property-price-part{
+			border-bottom:1px solid $primary;
+			margin-bottom:18px;
+			&:last-child{
+				border-bottom:0;
+				margin-bottom:0;
+			}
+		}
+	}
+
 }
 
 .ui-slick-property{

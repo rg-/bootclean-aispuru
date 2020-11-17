@@ -47,8 +47,8 @@ add_filter('wpbc/filter/theme_settings/file_path', function($file_path, $key){
 */
 
 add_filter('wpbc/filter/theme_settings/args',function($args){
-	$args['options_page']['page_title'] = 'AISPIRÚ settings';
-	$args['options_page']['menu_title'] = 'AISPIRÚ settings';
+	$args['options_page']['page_title'] = 'AISPURÚ settings';
+	$args['options_page']['menu_title'] = 'AISPURÚ settings';
 	$args['options_page']['icon_url'] = '';
 	return $args;
 },11,1);

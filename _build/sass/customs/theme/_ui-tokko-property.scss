@@ -1,19 +1,20 @@
+
+
+
 .ui-tokko-property{
 
-	border:1px solid #c2c2c2;
+	//border:1px solid #c2c2c2;
 	background-color:#fff;
-	display:block;
-	@include box-shadow(0 .5rem 1rem rgba($black, .15));
-	@include transition();
+	display:block; 
 
 	.ui-tokko-property-image{
 		position:relative; 
 		color:#fff;
 		overflow:hidden;
-		.icon{
+		.icon-circular{
 			position:absolute;
 			bottom:20px;
-			right:20px;
+			right:20px; 
 		}
 		.ref{
 			font-size:12px;
@@ -27,6 +28,7 @@
 			position:absolute;
 			bottom:20px;
 			left:20px;
+			right: 60px;
 			.meta{
 				font-size:15px;
 				letter-spacing:1px;
@@ -43,9 +45,7 @@
 			}
 		}
 		.embed-responsive{
-			    z-index: 0;
-			    @include transition(3s ease all);
-			    @include scale(1);
+			    z-index: 0; 
 		}
 		.embed-responsive-item{
 			
@@ -68,11 +68,28 @@
 		}
 	} 
 
+
+	@include box-shadow(0 .5rem 1rem rgba($black, .15));
+	@include transition(.6s $easeInOutCirc all);
+	.icon{
+		background-color:transparent;
+		@include transition(.6s $easeInOutCirc all);
+	}
+	.embed-responsive{
+	    z-index: 0;
+	    @include transition(.6s $easeInOutCirc all);
+	    @include scale(1);
+	}
+
 	&:hover{
 		text-decoration:none;
 		@include box-shadow(0 .5rem 1rem rgba($black, .25));
+		.icon{
+			background-color:$primary;
+			border-color:$primary;
+		}
 		.embed-responsive{
-			@include scale(1.1);
+			@include scale(1.2);
 		}
 	}
 
@@ -97,3 +114,61 @@
 			}
 		}
 	}
+
+
+
+	.pagination {
+		.page-item{
+			margin:$grid-gutter/2;
+			.page-link{
+				min-width: 38px;
+				text-align: center;
+				border:0;
+			}
+		}
+	}
+
+.ui-tokko-property-single{
+
+	.ui-tokko-property-container{
+
+		.ui-property-container-row{
+		
+			.ui-property-content-col{ 
+
+				.ui-property-content-row{
+					padding-bottom:$grid-gutter*2;
+					margin-bottom:$grid-gutter*2;
+					margin-top: $grid-gutter*2;
+					border-bottom:1px solid $primary;
+					&:first-child{
+						margin-top: 0;
+					}
+					&:last-child{
+						border-bottom: 0;
+					}
+				}
+
+			}
+			.ui-property-content-aside{
+
+				.ui-property-content-row{
+					background-color:#fff;
+					padding:30px 20px 20px 20px;
+					margin-bottom: $grid-gutter*2;
+					
+					@include box-shadow($box-shadow);
+					
+					&.ui-map-row{
+						padding:0;
+					}
+				}
+				
+			}
+		}
+	}
+
+	
+
+}
+

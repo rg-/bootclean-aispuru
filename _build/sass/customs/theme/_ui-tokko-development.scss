@@ -1,0 +1,21 @@
+.wpbc-tokko-development{
+
+	position: relative;
+
+	&:last-child{
+		border:0!important;
+	}
+
+	.ui-title-box{
+		position:relative;
+		z-index:19; 
+		margin: 30px 0;
+		left:-100px;
+		width: 300px;
+		max-width: 90%; 
+		background-color:$secondary;
+		color:#fff;
+		padding:45px;
+	}
+
+}

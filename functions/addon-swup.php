@@ -63,7 +63,7 @@ add_filter('wpbc/filter/swup/SwupScrollPlugin',function(){
 
 add_filter('wpbc/filter/swup/containers', function($containers){ 
 	//$containers = '#main-content, #simulate-body-tags';
-	$containers = '#main_navbar_container, #main-content-wrap, #wpbc_layout_debug, #ui-tokko-modals';
+	$containers = '#main_navbar_container, #main-content-wrap, #ui-tokko-modals';
 	return $containers;
 },20,1 );
 add_filter('wpbc/filter/swup/plugins/mainElement', function($mainElement){ 
