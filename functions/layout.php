@@ -61,3 +61,14 @@ add_filter('wpbc/filter/layout/go-up', function(){
 	return '<a href="#" class="btn btn-icon btn-light"><i class="icon-angle-up"></i></a>';
 
 },10,1);
+
+
+
+add_filter('wpbc/slick/args', function($slider_args, $post_id){
+
+	$slider_args['lazytype'] = 'lazybackground_inner';
+	$slider_args['lazytype_fx'] = 'blured';
+
+	return $slider_args;
+
+},10,2);

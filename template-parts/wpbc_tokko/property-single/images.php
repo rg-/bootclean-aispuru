@@ -37,6 +37,20 @@ $slick = array(
 	'accessibility' => false, 
 ); 
 $slick = json_encode($slick); 
+
+$slick_heights = array(
+			'xs' => array(
+				'default' => '100wh',
+				'min' => '375px',
+				'max' => '812px'
+			),
+			'lg' => array(
+				'default' => '100wh',
+				'min' => '680px',
+				'max' => '812px'
+			),
+		);
+		$slick_heights = json_encode($slick_heights); 
  
 if(empty($property_images)) return;
 
